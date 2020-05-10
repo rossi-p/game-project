@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Game Tutorial" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Project1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="../allegro/lib/liballegro_monolith-debug.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Project1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="../allegro/lib/liballegro_monolith.dll.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../allegro/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="../allegro/lib" />
+		</Linker>
+		<Unit filename="animacoes.cpp" />
+		<Unit filename="audio.cpp" />
+		<Unit filename="error_msg.cpp" />
+		<Unit filename="eventos.cpp" />
+		<Unit filename="fontes_e_texto.cpp" />
+		<Unit filename="gamelib/animacoes.h" />
+		<Unit filename="gamelib/audio.h" />
+		<Unit filename="gamelib/error_msg.h" />
+		<Unit filename="gamelib/eventos.h" />
+		<Unit filename="gamelib/fontes_e_texto.h" />
+		<Unit filename="gamelib/imagens.h" />
+		<Unit filename="gamelib/janela.h" />
+		<Unit filename="gamelib/mensagem.h" />
+		<Unit filename="gamelib/mouse.h" />
+		<Unit filename="gamelib/sprites.h" />
+		<Unit filename="gamelib/teclado.h" />
+		<Unit filename="gamelib/timer.h" />
+		<Unit filename="imagens.cpp" />
+		<Unit filename="janela.cpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mensagem.cpp" />
+		<Unit filename="mouse.cpp" />
+		<Unit filename="sprites.cpp" />
+		<Unit filename="teclado.cpp" />
+		<Unit filename="timer.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
