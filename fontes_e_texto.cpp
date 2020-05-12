@@ -40,7 +40,7 @@ int fontes_e_texto(void){
     }
 
     // Carregando o arquivo de fonte
-    fonte = al_load_font("arial.ttf", 48, 0);
+    fonte = al_load_font("gamelib/fonts/arial.ttf", 48, 0);
     if (!fonte){
         al_destroy_display(janela);
         error_msg("Falha ao carregar fonte");

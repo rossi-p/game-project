@@ -15,7 +15,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="../allegro/lib/liballegro_monolith-debug.dll.a" />
+					<Add library="allegro/lib/liballegro_monolith-debug.dll.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -28,16 +28,16 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="../allegro/lib/liballegro_monolith.dll.a" />
+					<Add library="allegro/lib/liballegro_monolith.dll.a" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="../allegro/include" />
+			<Add directory="allegro/include" />
 		</Compiler>
 		<Linker>
-			<Add directory="../allegro/lib" />
+			<Add directory="allegro/lib" />
 		</Linker>
 		<Unit filename="animacoes.cpp" />
 		<Unit filename="audio.cpp" />
@@ -50,14 +50,12 @@
 		<Unit filename="gamelib/eventos.h" />
 		<Unit filename="gamelib/fontes_e_texto.h" />
 		<Unit filename="gamelib/imagens.h" />
-		<Unit filename="gamelib/janela.h" />
 		<Unit filename="gamelib/mensagem.h" />
 		<Unit filename="gamelib/mouse.h" />
 		<Unit filename="gamelib/sprites.h" />
 		<Unit filename="gamelib/teclado.h" />
 		<Unit filename="gamelib/timer.h" />
 		<Unit filename="imagens.cpp" />
-		<Unit filename="janela.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mensagem.cpp" />
 		<Unit filename="mouse.cpp" />

@@ -22,7 +22,7 @@ int imagens(void)
     janela = al_create_display(640, 480);
 
     // Carrega a imagem
-    imagem = al_load_bitmap("hu3.bmp");
+    imagem = al_load_bitmap("gamelib/images/hu3.bmp");
 
     // Desenha a imagem na tela
     al_draw_bitmap(imagem, 0, 0, 0);

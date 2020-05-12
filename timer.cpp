@@ -11,7 +11,7 @@
 ALLEGRO_DISPLAY *janela_timer = NULL;
 ALLEGRO_EVENT_QUEUE *fila_eventos_timer = NULL;
 //declara o timer do programa
-ALLEGRO_TIMER *timer = NULL;
+ALLEGRO_TIMER *timeroftimer = NULL;
 
 int inicializar_timer(){
     if (!al_init()){
@@ -20,8 +20,8 @@ int inicializar_timer(){
     }
 
     //cria o timer com o intervalo de tempo que ele ira disparar
-    timer = al_create_timer(1.0 / FPS);
-    if(!timer) {
+    timeroftimer = al_create_timer(1.0 / FPS);
+    if(!timeroftimer) {
         error_msg("Falha ao criar temporizador");
         return 0;
     }
@@ -29,7 +29,7 @@ int inicializar_timer(){
     janela_timer = al_create_display(LARGURA_TELA, ALTURA_TELA);
     if(!janela_timer) {
         error_msg("Falha ao criar janela_timer");
-        al_destroy_timer(timer);
+        al_destroy_timer(timeroftimer);
         return 0;
     }
 
@@ -38,18 +38,18 @@ int inicializar_timer(){
     fila_eventos_timer = al_create_event_queue();
     if(!fila_eventos_timer) {
         error_msg("Falha ao criar fila de eventos");
-        al_destroy_timer(timer);
+        al_destroy_timer(timeroftimer);
         al_destroy_display(janela_timer);
         return 0;
     }
 
     al_register_event_source(fila_eventos_timer, al_get_display_event_source(janela_timer));
     //registra o timer na fila de eventos
-    al_register_event_source(fila_eventos_timer, al_get_timer_event_source(timer));
+    al_register_event_source(fila_eventos_timer, al_get_timer_event_source(timeroftimer));
     al_clear_to_color(al_map_rgb(0,0,0));
     al_flip_display();
     //inicia a contagem do timer
-    al_start_timer(timer);
+    al_start_timer(timeroftimer);
 
     return 1;
 }
@@ -99,7 +99,7 @@ int timer_f(void){
         }
     }
 
-    al_destroy_timer(timer);
+    al_destroy_timer(timeroftimer);
     al_destroy_display(janela_timer);
     al_destroy_event_queue(fila_eventos_timer);
 

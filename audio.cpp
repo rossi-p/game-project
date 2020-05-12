@@ -43,12 +43,12 @@ int inicializar_audio(){
     }
 
     //carrega os samples
-    som_verm = al_load_sample( "wololo.ogg" );
+    som_verm = al_load_sample( "gamelig/audio/wololo.ogg" );
     if (!som_verm){
         error_msg( "Audio nao carregado" );
         return 0;
     }
-    som_azul = al_load_sample( "aiao.ogg" );
+    som_azul = al_load_sample( "gamelig/audio/aiao.ogg" );
     if (!som_azul){
         error_msg( "Audio nao carregado" );
         al_destroy_sample(som_verm);
@@ -56,7 +56,7 @@ int inicializar_audio(){
     }
 
     //carrega o stream
-    musica = al_load_audio_stream("soundtrack.ogg", 4, 1024);
+    musica = al_load_audio_stream("gamelig/audio/soundtrack.ogg", 4, 1024);
     if (!musica)
     {
         error_msg( "Audio nao carregado" );

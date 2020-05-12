@@ -49,7 +49,7 @@ int inicializar_sprites(){
     }
 
     //carrega a folha de sprites na variavel
-    folha_sprite = al_load_bitmap("run2.bmp");
+    folha_sprite = al_load_bitmap("gamelib/images/run2.bmp");
     if (!folha_sprite){
         error_msg("Falha ao carregar sprites");
         al_destroy_timer(timer_sprites);
@@ -61,7 +61,7 @@ int inicializar_sprites(){
     al_convert_mask_to_alpha(folha_sprite,al_map_rgb(255,0,255));
 
     //carrega o fundo
-    fundo = al_load_bitmap("background.png");
+    fundo = al_load_bitmap("gamelib/images/background.png");
     if (!fundo){
         error_msg("Falha ao carregar fundo");
         al_destroy_timer(timer_sprites);
